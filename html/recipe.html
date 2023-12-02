@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Delve into a treasure trove of recipes with James Cooks. From comforting classics to exotic delights, find step-by-step guides that make cooking a joy. Discover your next favorite dish today!"
+    />
+    <title>James Cook|Exploring World Cuisines From My Kitchen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Roboto:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/images/android-chrome-192x192.png"
+    />
+    <link rel="stylesheet" href="/css/global.css" />
+    <link rel="stylesheet" href="/css/recipe.css" />
+    <link rel="stylesheet" href="/css/form.css" />
+    <script
+      src="https://kit.fontawesome.com/0933736d52.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script src="/js/global.js" defer></script>
+    <script src="/js/recipe.js" defer></script>
+    <!-- Hotjar Tracking Code for JamesSmith-Foodblog -->
+    <script>
+      (function (h, o, t, j, a, r) {
+        h.hj =
+          h.hj ||
+          function () {
+            (h.hj.q = h.hj.q || []).push(arguments);
+          };
+        h._hjSettings = { hjid: 3747166, hjsv: 6 };
+        a = o.getElementsByTagName("head")[0];
+        r = o.createElement("script");
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
+    </script>
+  </head>
+  <body>
+    <div id="top-of-page" class="site-container">
+      <header>
+        <!-- === NAV BAR === -->
+        <button class="hamburger" aria-label="Toggle navigation menu">
+          <i class="fa-solid fa-burger"></i>
+        </button>
+        <nav class="flex center w-100">
+          <ul class="flex center">
+            <li>
+              <a href="/index.html"><span></span>HOME</a>
+            </li>
+            <li>
+              <a href="/html/contact.html"><span></span>CONTACT</a>
+            </li>
+            <li>
+              <a href="/html/about.html"><span></span>ABOUT</a>
+            </li>
+            <li>
+              <a href="/html/posts.html"><span></span>POSTS</a>
+            </li>
+          </ul>
+        </nav>
+        <!-- === BRAND SECTION === -->
+        <section class="brand-container flex center">
+          <a class="flex center" href="/index.html"
+            ><h1 class="flex center">
+              James
+              <img
+                class="brand-logo"
+                src="/images/Brand-logo.png"
+                alt="Brand logo. Plate with fork and knife"
+              />
+              Cooks
+            </h1></a
+          >
+        </section>
+      </header>
+      <main>
+        <!-- === SECTION 1 RECIPE === -->
+        <section class="hero-posts w-100">
+          <div class="content-container flex center box-shadow w-100">
+            <!--Enlarged img modal-->
+            <div id="imageModal" class="modal w-100">
+              <span class="close"><i class="fa-solid fa-x fa-beat"></i></span>
+              <img
+                class="modal-content"
+                id="enlargedImage"
+                src="#"
+                alt="Desciption of the image"
+              />
+            </div>
+            <div class="content-img">
+              <!-- Figure,img and figcaption from API, JS -->
+            </div>
+            <div class="content-text">
+              <div class="margin-bot17 flex-column">
+                <h2 class="margin-bot17">RECIPE</h2>
+                <hr class="hero-hr" />
+              </div>
+              <ul id="ingredient-list" class="ingredient-list">
+                <!-- === UL list from API, JS === -->
+              </ul>
+            </div>
+          </div>
+          <!--Loader recipe-->
+          <div class="loader-recipe text-center hidden" id="loaderRecipe">
+            <i class="fa-solid fa-fish fa-2x icon1"></i>
+            <i class="fa-solid fa-egg fa-2x icon2"></i>
+            <i class="fa-solid fa-carrot fa-2x icon3"></i>
+            <i class="fa-solid fa-pepper-hot fa-2x icon4"></i>
+            <i class="fa-solid fa-apple-whole fa-2x icon5"></i>
+            <i class="fa-solid fa-shrimp fa-2x icon6"></i>
+            <p class="loader-text text-center">Loading...</p>
+          </div>
+          <!--Error message recipe-->
+          <p
+            class="error-message-recipe text-center"
+            id="errorRecipeMessage"
+          ></p>
+        </section>
+        <!-- === SECTION 2 HOW TO MAKE === -->
+        <section class="w-100">
+          <div class="section2-container content-container flex w-100">
+            <div class="container-howto content-img">
+              <h2 class="margin-bot17">
+                HOW TO MAKE<span class="dish">
+                  <!-- Title from API, JS --></span
+                >
+              </h2>
+              <hr class="how-to-hr-left" />
+              <ol id="recipe-instructions" class="steps-list">
+                <!-- OL list from API, JS -->
+              </ol>
+            </div>
+            <div class="container-notes content-text">
+              <h2 class="margin-bot17">NOTES</h2>
+              <hr class="how-to-hr-right" />
+              <p class="flex space-between">
+                MY RATING:
+                <span class="rating-value">
+                  <!-- Rating value from API, JS -->
+                </span>
+              </p>
+              <p class="flex space-between">
+                DIFFICULTY:
+                <span class="difficulty-value">
+                  <!-- Difficulty value from API, JS -->
+                </span>
+              </p>
+              <p class="flex space-between">
+                TIME:
+                <span class="time-value">
+                  <!-- Timing value from API, JS -->
+                </span>
+              </p>
+              <p class="flex space-between">
+                CATEGORY:
+                <span class="category-value">
+                  <!--Category value from API, JS -->
+                </span>
+              </p>
+              <p class="flex space-between">
+                TYPE:
+                <span class="type-value">
+                  <!--Type value from API, JS -->
+                </span>
+              </p>
+              <p class="flex space-between">
+                ORIGIN:
+                <span class="origin-value">
+                  <!--  Origin value from API, JS -->
+                </span>
+              </p>
+            </div>
+          </div>
+          <!--Comment Form-->
+          <div
+            class="comment-section-container flex-column center text-center w-100"
+          >
+            <button
+              id="toggleCommentsButton"
+              class="show-hide-comment cta-layout flex center"
+            >
+              <!--Shows number of comments for each recipe-->
+            </button>
+            <div id="commentSection" class="comment-section flex-column w-100">
+              <!--Error message post comment-->
+              <p
+                class="error-post-comments-message block text-center"
+                id="errorPostCommentsMessage"
+              ></p>
+              <h3 class="comment-section-header">Leave a comment</h3>
+              <form class="center flex-column" id="commentForm">
+                <input
+                  type="text"
+                  id="commentName"
+                  placeholder="Your Name"
+                  required
+                  minlength="3"
+                />
+                <!-- <p class="error-message" id="commentNameError"></p> for js -->
+                <!--Email is hidden, only to make the comment form work with wordpress!-->
+                <input type="email" class="comment-email" id="commentEmail" />
+                <textarea
+                  id="commentText"
+                  placeholder="Your Comment"
+                  required
+                  minlength="10"
+                ></textarea>
+                <!-- <p class="error-message" id="commentMessageError"></p> for js -->
+                <button
+                  class="post-comment center flex cta-layout"
+                  type="submit"
+                >
+                  Post Comment
+                </button>
+              </form>
+              <!--Loader comments-->
+              <div
+                class="loader-comment hidden text-center center"
+                id="loaderComment"
+              >
+                <i class="fa-solid fa-fish fa-2x icon1"></i>
+                <i class="fa-solid fa-egg fa-2x icon2"></i>
+                <i class="fa-solid fa-carrot fa-2x icon3"></i>
+                <i class="fa-solid fa-pepper-hot fa-2x icon4"></i>
+                <i class="fa-solid fa-apple-whole fa-2x icon5"></i>
+                <i class="fa-solid fa-shrimp fa-2x icon6"></i>
+                <p class="loader-text text-center">Loading...</p>
+              </div>
+              <!--Error message comments-->
+              <p
+                class="error-comments-message block text-center"
+                id="errorCommentsMessage"
+              ></p>
+              <div
+                id="commentsContainer"
+                class="comments-container flex-column center text-center"
+              >
+                <!-- Comments from WP, JS -->
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- === SECTION 3 SIMULAR DISHES === -->
+        <section class="simular-container">
+          <div class="simular-h2-container text-left w-100">
+            <h2>SIMILAR DISHES</h2>
+            <hr class="simular-hr hr-devider-small" />
+            <!--Loader similar-->
+            <div
+              class="loader-similar hidden text-center center"
+              id="loaderSimilar"
+            >
+              <i class="fa-solid fa-fish fa-2x icon1"></i>
+              <i class="fa-solid fa-egg fa-2x icon2"></i>
+              <i class="fa-solid fa-carrot fa-2x icon3"></i>
+              <i class="fa-solid fa-pepper-hot fa-2x icon4"></i>
+              <i class="fa-solid fa-apple-whole fa-2x icon5"></i>
+              <i class="fa-solid fa-shrimp fa-2x icon6"></i>
+              <p class="loader-text text-center">Loading...</p>
+            </div>
+            <!--Error message similar-->
+            <p
+              class="error-similar-message block text-center"
+              id="errorSimilarMessage"
+            ></p>
+          </div>
+          <div class="posts flex center text-center">
+            <!--Post from JS and API-->
+          </div>
+        </section>
+      </main>
+      <footer id="newsletter-section" class="">
+        <div class="footer-links-some flex space-between center">
+          <div class="footer-links flex-column">
+            <p class="footer-links-header">Quick links:</p>
+            <a href="/html/posts.html">All blog posts</a>
+            <a href="/html/about.html">About</a>
+            <a href="/html/contact.html">Contact</a>
+            <a href="/index.html">Home</a>
+          </div>
+          <div class="footer-brand-container">
+            <a
+              id="back-to-top-link"
+              class="flex center"
+              href="/html/recipe.html#top-of-page"
+              ><p class="flex center footer-brand-text">
+                James
+                <img
+                  class="brand-logo"
+                  src="/images/Brand-logo-footer.png"
+                  alt="Brand logo. Plate with fork and knife(white)"
+                />
+                Cooks
+              </p></a
+            >
+          </div>
+          <div class="footer-some flex">
+            <i class="fa-brands fa-facebook fa-2x"></i
+            ><i class="fa-brands fa-instagram fa-2x"></i
+            ><i class="fa-brands fa-twitter fa-2x"></i>
+          </div>
+        </div>
+        <div class="copyright-container flex center">
+          <p>COPYRIGHT 2023 © JAMES SMITH</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

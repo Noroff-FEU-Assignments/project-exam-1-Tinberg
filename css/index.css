@@ -1,0 +1,258 @@
+/* For section 2 about */
+@keyframes dissolveIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* === INDEX GLOBALS === */
+hr {
+  min-width: 250px;
+}
+.hr-devider-bot {
+  margin: 20px 0 60px;
+}
+.article-container {
+  flex-wrap: wrap;
+  position: relative;
+}
+.article-header {
+  padding-top: 25px;
+  text-overflow: ellipsis;
+  max-width: 264px;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+}
+.article-text {
+  max-width: 175px;
+}
+
+/* === HERO IMAGE === */
+.hero-img {
+  max-height: 600px;
+  object-position: center 58%;
+}
+
+/* === SECTION 1 CATEGORIES === */
+.round-img {
+  border-radius: 50%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.article-text-categories {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+article:hover .round-img {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.6);
+}
+
+.article-text-categories::before,
+.article-header::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 1px;
+  background-color: var(--hover-bg-color);
+  transition: width 0.3s;
+}
+/*For Section 1 and 3*/
+.article-categories:hover .article-header::before {
+  width: 100%;
+}
+
+/* === SECTION 2 ABOUT ME=== */
+.fa-location-dot {
+  padding-right: 15px;
+}
+/*Content-container for Section 2 and 4*/
+.content-container,
+figure img {
+  max-height: 522px;
+}
+/*For JS IMG slider*/
+.slider {
+  overflow: hidden;
+}
+.slider figure img {
+  transform: translateX(-100%);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+.slider figure.active img {
+  transform: translateX(0);
+  opacity: 1;
+}
+.slider figure {
+  display: none;
+}
+.slider figure.active {
+  display: block;
+  animation: dissolveIn 3s ease forwards;
+}
+.about-text {
+  margin-bottom: 50px;
+}
+
+/* === SECTION 3 LATEST POSTS === */
+.left-arrow-container,
+.right-arrow-container {
+  margin-top: -150px;
+}
+.arrow {
+  font-size: var(--arrow-font-size);
+  background: var(--body-bg-color);
+  color: var(--main-color);
+  cursor: pointer;
+  padding: 5px 15px;
+}
+
+.article-latest:hover .cta-layout {
+  background-color: var(--hover-bg-color);
+}
+.article-latest:hover .article-header::before {
+  width: 100%;
+}
+.zoom-img {
+  transition: transform 0.3s ease;
+}
+.article-latest:hover .zoom-img {
+  transform: scale(1.1);
+}
+.latest-top-text {
+  padding-top: 2.5px;
+}
+
+.latest-bot-text {
+  padding-bottom: 10px;
+}
+.slider-error-message {
+  color: var(--error-message-color);
+  padding: 0 25px;
+}
+/*Loader-Slider*/
+.loader-slider-container {
+  margin-top: 20px;
+}
+.loader-slider {
+  padding-bottom: 15px;
+}
+.hidden {
+  display: none;
+}
+
+/* === SECTION 4 NEWSLETTER === */
+.newsletter-h2 {
+  padding-top: 20px;
+}
+.hr-newsletter {
+  width: 250px;
+}
+.sign-upbtn {
+  margin-bottom: 25px;
+}
+/*Style For Form in form.css*/
+
+/* === MEDIA QUERIES === */
+/*MQ for max 1371px*/
+@media (max-width: 1371px) {
+  /*Section3*/
+  .posts-container {
+    justify-content: space-around;
+  }
+}
+/*MQ for max 1255px*/
+@media (max-width: 1255px) {
+  /*Section 1*/
+  .article-categories {
+    flex-basis: calc(50% - 10px);
+  }
+}
+/*MQ for max 1059px*/
+@media (max-width: 1059px) {
+  /*Section2*/
+  .content-about-text {
+    margin-bottom: 30px;
+  }
+  .about-text {
+    margin-bottom: 40px;
+  }
+
+  /*Section 2 and 4*/
+  .content-container {
+    max-height: none;
+  }
+  .content-img img {
+    object-position: center 65%;
+    max-height: 500px;
+  }
+  /*Section 4*/
+  .form-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  /*Section 3*/
+
+  .arrow {
+    font-size: 2.5rem;
+  }
+  .sign-upbtn {
+    margin-left: auto;
+    margin-right: auto;
+    width: 125px;
+  }
+  form input {
+    width: 500px;
+  }
+}
+/*MQ for max 744px*/
+@media (max-width: 744px) {
+  .hr-devider-bot {
+    margin: 20px 0 40px;
+  }
+  /*Section 3*/
+  .article-container {
+    justify-content: center;
+  }
+  .article-latest {
+    padding: 0;
+    z-index: 10;
+  }
+  .arrow {
+    padding: 5px;
+  }
+  .left {
+    padding-right: 10px;
+  }
+  .right {
+    padding-left: 10px;
+  }
+
+  .article-latest a {
+    text-align: center;
+  }
+  .article-latest h3,
+  .article-latest .article-text,
+  .article-latest .cta-layout {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /*Section 2 and 4*/
+  .content-img img {
+    object-position: center 65%;
+    max-height: 450px;
+  }
+  /*Section 4 */
+  .hr-devider-small {
+    margin: 15px 0;
+  }
+  form input {
+    width: 300px;
+  }
+}

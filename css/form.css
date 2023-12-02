@@ -1,0 +1,36 @@
+/* === FORM=== */
+form input,
+form textarea {
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 10px;
+}
+form input,
+form textarea,
+.cta-layout {
+  font-size: var(--base-font-size);
+  font-family: var(--body-font-family);
+  font-weight: var(--body-font-weight-light);
+}
+input,
+textarea,
+input::placeholder,
+textarea::placeholder {
+    color: var(--main-color);
+}
+
+.error-message {
+  color: var(--error-message-color);
+}
+.error-message-bot {
+  margin-bottom: 10px;
+}
+
+/* Override browser styles for input Chrome and Safari*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px var(--body-bg-color) inset;
+  -webkit-text-fill-color: var(--main-color);
+}

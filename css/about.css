@@ -1,0 +1,158 @@
+/* === SECTION 1  === */
+/*Section 1 location*/
+
+hr {
+  max-width: 300px;
+  margin: 20px auto 50px ;
+}
+.content-container,
+figure img {
+  max-height: 522px;
+}
+.fa-location-dot {
+  padding-right: 15px;
+}
+/*For JS IMG slider*/
+.slider {
+  overflow: hidden;
+}
+.slider figure img {
+  transform: translateX(-100%);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+.slider figure.active img {
+  transform: translateX(0);
+  opacity: 1;
+}
+.slider figure {
+  display: none;
+}
+.slider figure.active {
+  display: block;
+  animation: dissolveIn 3s ease forwards;
+}
+.about-text {
+  margin-bottom: 50px;
+}
+.myjourney-hr {
+  padding: 20px 0;
+}
+.myjourney-hr {
+  width: 250px;
+}
+/*Section 1 and 2*/
+.myjourney-hr,
+.value-text-container {
+  margin: 0 auto;
+}
+/* === SECTION 2  === */
+
+.fa-utensils,
+.fa-earth-americas,
+.fa-users,
+.fa-envelope {
+  padding-bottom: 15px;
+  font-size: var(--h1-font-size);
+}
+.background-text-value {
+  background: var(--section-bg-color);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  background-color: var(--section-bg-color);
+  padding: 50px 0 25px;
+}
+.value-text-container {
+  font-size: var(--h3-font-size); /*Not h3 element*/
+}
+.value-text-container,
+.background-text-value {
+  padding: 50px 25px;
+}
+.cta-container {
+  margin-top: 25px;
+}
+.subscribe-text {
+  padding-bottom: 35px;
+}
+/*Section 2 and 3*/
+.cta-btn {
+  padding: 10px 30px;
+}
+
+/* === SECTION 3  === */
+.background-container {
+  background-image: url(/images/About-background.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 25px;
+}
+.text-container {
+  padding: 50px 50px 50px 575px;
+}
+.contact-text {
+  padding: 35px 0;
+}
+
+/* === MEDIA QUERIES === */
+
+/*MQ for max 1059px*/
+@media (max-width: 1059px) {
+  /*Section 1*/
+  .content-about-text {
+    margin-bottom: 30px;
+  }
+  .about-text {
+    margin-bottom: 40px;
+  }
+  .content-container {
+    max-height: none;
+  }
+  .content-img img {
+    object-position: center 65%;
+    max-height: 500px;
+  }
+  /*Section 2*/
+  .background-text-value {
+    padding: 20px 15px 50px;
+    text-align: center;
+  }
+  .value-text-container {
+    flex-direction: column;
+    padding: 30px 0;
+  }
+  .value-text-container li {
+    padding: 20px 0;
+  }
+  .fa-utensils,
+  .fa-earth-americas,
+  .fa-users {
+    padding-bottom: 10px;
+  }
+  /*Section 3*/
+  .background-container {
+    background-position: left;
+  }
+  .text-container {
+    padding: 50px 25px 50px 550px;
+  }
+}
+/*MQ for max 900px*/
+@media (max-width: 950px) {
+  /*Section3*/
+  .background-container {
+    background-color: var(--section-bg-color);
+    background-image: none;
+  }
+  .text-container {
+    padding: 35px 25px 50px;
+  }
+}
+/*MQ for max 744px*/
+@media (max-width: 744px) {
+  /*Section 1*/
+  .content-img img {
+    object-position: center 65%;
+    max-height: 450px;
+  }
+  
+}

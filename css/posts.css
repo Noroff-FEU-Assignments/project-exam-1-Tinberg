@@ -1,0 +1,290 @@
+/* For 2D slider small screens */
+@keyframes dissolveIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* === SECTION 1 Slider=== */
+.hero-posts {
+  background-image: url(/images/Greeksalad-background.jpg);
+  transition: background-image 1s ease, opacity 1s ease;
+  background-size: cover;
+  background-position: center;
+}
+.hero-posts.bg-slide2 {
+  background-image: url(/images/Tiramisu-background.jpg);
+}
+.hero-posts.bg-slide3 {
+  background-image: url(/images/Irishstew-background.jpg);
+}
+.hero-posts.bg-slide4 {
+  background-image: url(/images/Puffpinwheels-background.jpg);
+}
+.hero-posts.bg-slide5 {
+  background-image: url(/images/Japanesestew-background.jpg);
+}
+.hero-posts.bg-slide6 {
+  background-image: url(/images/Smoothie-background.jpg);
+}
+.hero-posts.bg-slide7 {
+  background-image: url(/images/Frozenyogurt-background.jpg);
+}
+.highlight-h2,
+h2 {
+  padding-top: 20px;
+}
+.highlight-h2 {
+  background-color: rgba(227, 241, 250, 0.7);
+  padding-bottom: 10px;
+}
+.slider-container {
+  position: relative;
+  perspective: 1000px;
+}
+.slider {
+  width: 1200px;
+  height: 600px;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateY(0deg);
+}
+.slider .slide {
+  position: absolute;
+  width: 240px;
+  height: 240px;
+  top: 43%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateY(0deg) translateZ(0px);
+  backface-visibility: hidden;
+  opacity: 0.75;
+  transition: transform 1s, opacity 1s;
+  padding: 0;
+}
+.slider .slide img {
+  width: 100%;
+  height: 100%;
+}
+.slider .slide.active {
+  transform: translate(-50%, -50%) rotateY(0deg) translateZ(250px);
+  opacity: 1;
+}
+.h3-slider {
+  min-height: 65px;
+  padding-top: 8px;
+  font-size: var(--footer-font-size);
+  background-color: var(--section-bg-color);
+  color: var(--main-color);
+}
+.slider a:hover > .h3-slider {
+  background-color: var(--hover-bg-color);
+  color: var(--button-anchor-color);
+}
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: var(--arrow-font-size);
+  background: var(--body-bg-color);
+  color: var(--main-color);
+  cursor: pointer;
+  z-index: 10;
+  padding: 5px 15px;
+  background: none;
+}
+.left {
+  left: 15%;
+}
+.right {
+  right: 15%;
+}
+
+/* === SECTION 2 POSTS=== */
+.filter-sort-container {
+  padding: 0 100px;
+}
+.select-container,
+select {
+  background-color: var(--body-bg-color);
+  color: var(--main-color);
+  font-size: var(--base-font-size);
+  font-weight: var(--body-font-weight-bold);
+}
+select {
+  width: 150px;
+}
+
+.select-container {
+  padding: 10px;
+  margin: 10px;
+}
+
+.posts {
+  flex-wrap: wrap;
+}
+.post {
+  padding: 25px;
+}
+.a-post {
+  position: relative;
+}
+.a-post img {
+  box-shadow: none;
+}
+.a-post::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 24%;
+  left: 0;
+  z-index: 1;
+}
+.a-post::before,
+.a-post .h3-post {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.a-post:hover::before {
+  background-color: var(--section-bg-color);
+}
+.a-post:hover .h3-post {
+  background-color: var(--hover-bg-color);
+  color: var(--button-anchor-color);
+}
+.a-post:hover .hover-content {
+  display: block;
+}
+.h3-post {
+  background-color: var(--section-bg-color);
+  padding: 10px 5px;
+  max-width: 264px;
+  min-height: 86.72px;
+}
+
+/*HOVER CONTENT POST*/
+.hover-content {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  right: 10%;
+  bottom: 10%;
+  z-index: 2;
+  display: none;
+  padding: 10px;
+}
+.fa-heart {
+  margin-left: 5px;
+}
+.postsbtn {
+  font-size: var(--base-font-size);
+  padding: 15px;
+  width: 100%;
+  max-width: 225px;
+}
+/*for section 2 and 3*/
+.recipe-weekbtn,
+.postsbtn {
+  margin-top: 25px;
+}
+.section-2-hr {
+  margin: 0 auto;
+  padding-bottom: 15px;
+}
+hr {
+  width: 280px;
+}
+/*hide postsbtn and loading-spinner*/
+.hidden {
+  display: none;
+}
+.loading-spinner,
+.error-message {
+  padding: 50px 25px;
+}
+.error-message {
+  color: var(--error-message-color);
+}
+
+/* === SECTION 3 Recipe of the week=== */
+
+.content-container,
+figure img {
+  max-height: 522px;
+}
+
+/* === MEDIA QUERIES === */
+
+/*MQ for max 1059px*/
+@media (max-width: 1059px) {
+  /*Section 1*/
+  .hero-posts {
+    height: 550px;
+  }
+  .arrow {
+    font-size: 2.5rem;
+    top: 200px;
+  }
+  .left {
+    left: 20%;
+  }
+  .right {
+    right: 20%;
+  }
+  .slider-container {
+    perspective: none;
+    overflow: hidden;
+  }
+  .slider {
+    bottom: 80px;
+    right: 12px;
+    transform: none;
+    transform-style: flat;
+  }
+  .slider .slide.active {
+    animation: dissolveIn 0.5s ease-in-out forwards;
+  }
+  .slider .slide:not(.active) {
+    display: none;
+  }
+  .slider .slide img {
+    height: 264px;
+  }
+  .slider .slide img,
+  .h3-slider {
+    width: 264px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
+
+  /*Section 3*/
+  .content-container {
+    max-height: none;
+  }
+  .content-img img {
+    object-position: center;
+    max-height: 500px;
+  }
+}
+/*MQ for max 744px*/
+@media (max-width: 744px) {
+  /*Section 1*/
+  .arrow {
+    padding: 5px 5px;
+  }
+  .left {
+    left: 2%;
+  }
+  .right {
+    right: 2%;
+  }
+  /*Section 2*/
+  .filter-sort-container {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 15px;
+  }
+  .section-2-hr {
+    padding-bottom: 0;
+  }
+}

@@ -1,0 +1,387 @@
+/* === Section 1 === */
+.content-container,
+figure img {
+  max-height: 700px;
+}
+.recipe-img,
+.modal,
+.close {
+  cursor: pointer;
+}
+
+/*Javascript function to handle modal functionality, by opening the modal and display the clicked img*/
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100000;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.modal-content {
+  margin: auto;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: default;
+  max-width: 95%;
+}
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: var(--button-anchor-color);
+  font-size: 2.3rem;
+  font-weight: bold;
+}
+.hero-hr {
+  width: 200px;
+  margin-bottom: 10px;
+}
+.ingredient-list li {
+  margin: 15px 0;
+  font-size: var(--h3-font-size); /*Not Header Font-size!*/
+  list-style-type: disc;
+}
+/* === Section 2 === */
+/*50/50 Left*/
+.section2-container {
+  background-color: var(--body-bg-color);
+  max-height: none;
+}
+/*Section 2 and 3*/
+.section2-container,
+.simular-h2-container {
+  padding: 0 75px;
+}
+
+.dish {
+  margin-left: 10px;
+}
+.how-to-hr-left {
+  width: 500px;
+}
+.steps-list {
+  counter-reset: step-counter;
+}
+.steps-list li {
+  counter-increment: step-counter;
+  position: relative;
+  padding-left: 50px;
+  margin-bottom: 50px;
+}
+.steps-list li::before {
+  content: counter(step-counter);
+  position: absolute;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: var(--button-anchor-bg-color);
+  color: var(--button-anchor-color);
+}
+/*50/50 Left & Right*/
+.how-to-hr-left,
+.how-to-hr-right {
+  margin-bottom: 30px;
+}
+/*50/50 Right*/
+.container-notes {
+  line-height: 35px;
+}
+.how-to-hr-right {
+  width: 200px;
+}
+.fa-heart {
+  margin-left: 5px;
+}
+/*Comment and form*/
+.post-comment,
+.comment-section-header {
+  margin: 25px;
+}
+.show-hide-comment,
+.post-comment {
+  min-width: 225px;
+}
+.comment-section {
+  display: none;
+  background-color: var(--section-bg-color);
+  padding: 25px 0;
+}
+.show-hide-comment {
+  margin: 50px 25px 25px 25px;
+}
+form input,
+form textarea {
+  min-width: 500px;
+}
+.comments-container {
+  padding: 25px;
+}
+.comment-item {
+  text-align: left;
+  width: 1000px;
+  padding: 10px 25px;
+  margin: 5px;
+  border-radius: 5px;
+  background-color: var(--body-bg-color);
+}
+.comment-name {
+  font-weight: var(--body-font-weight-bold);
+}
+.comment-date {
+  font-size: 0.78rem;
+}
+.comment-email {
+  visibility: hidden;
+  position: absolute;
+  left: -9999px;
+}
+/*Loader 2 and 3*/
+.hidden {
+  display: none;
+}
+.loader-recipe {
+  padding-top: 50px;
+}
+.loader-similar,
+.loader-comment {
+  padding-top: 25px;
+}
+.loader-comment .loader-text::before {
+  background: linear-gradient(
+    to right,
+    transparent 70%,
+    var(--section-bg-color) 70%
+  );
+  background-size: 200% 100%;
+  animation: revealText 5s infinite;
+}
+
+/* === Section 3 === */
+.simular-hr {
+  max-width: 300px;
+}
+.posts {
+  flex-wrap: wrap;
+}
+.post {
+  padding: 22px;
+}
+.a-post {
+  position: relative;
+}
+.a-post img {
+  box-shadow: none;
+  width: 400px;
+  height: 400px;
+}
+.a-post::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 17.5%;
+  left: 0;
+  z-index: 1;
+}
+.a-post::before,
+.a-post .h3-post {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.a-post:hover::before {
+  background-color: var(--section-bg-color);
+}
+.a-post:hover .h3-post {
+  background-color: var(--hover-bg-color);
+  color: var(--button-anchor-color);
+}
+.a-post:hover .hover-content {
+  display: block;
+}
+.h3-post {
+  background-color: var(--section-bg-color);
+  padding: 10px 5px;
+  max-width: 400px;
+  min-height: 86.72px;
+}
+/*HOVER CONTENT POST*/
+.hover-content {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  right: 10%;
+  bottom: 10%;
+  z-index: 2;
+  display: none;
+  padding: 10px;
+  line-height: 40px;
+}
+.fa-heart {
+  margin-left: 5px;
+}
+/*Error messages*/
+.error-similar-message,
+.error-message-recipe,
+.error-comments-message,
+.error-post-comments-message {
+  color: var(--error-message-color);
+  padding: 0 25px;
+}
+.error-message-recipe {
+  margin: 75px 0;
+}
+.error-similar-message {
+  padding: 15px 0;
+}
+
+/* === MEDIA QUERIES === */
+/*MQ max 1332px*/
+@media (max-width: 1332px) {
+  /*Section 3*/
+  .posts {
+    justify-content: space-around;
+  }
+  .post {
+    padding: 10px;
+  }
+  .a-post img {
+    width: 325px;
+    height: 325px;
+  }
+  .a-post::before {
+    bottom: 21%;
+  }
+}
+/*MQ max 1059px*/
+@media (max-width: 1059px) {
+  /*Section 1*/
+  .hero-posts {
+    text-align: center;
+  }
+  .content-container {
+    max-height: none;
+  }
+  .content-img img {
+    object-position: center;
+    max-height: 500px;
+  }
+  .content-text {
+    text-align: center;
+  }
+  .ingredient-list {
+    display: inline-block;
+    text-align: center;
+    padding: 25px;
+  }
+  .ingredient-list li {
+    list-style-type: none;
+    text-align: left;
+    position: relative; 
+    padding-left: 25px; 
+}
+.ingredient-list li::before {
+    content: "•";
+    position: absolute; 
+    left: 0; 
+    top: 0; 
+    margin-right: 10px;
+    font-weight: var(--body-font-weight-bold);
+}
+  .hero-hr {
+    margin: 0 auto;
+    width: 40%;
+  }
+
+  /*Section 2*/
+  .content-text {
+    padding: 25px 1px;
+  }
+  .comment-item {
+    width: 800px;
+  }
+
+  /*Section 3*/
+  .simular-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .simular-h2-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .simular-container h2 {
+    text-align: center;
+    padding-top: 50px;
+  }
+  .simular-hr {
+    width: 600px;
+  }
+  .a-post img {
+    width: 300px;
+    height: 300px;
+  }
+  .a-post::before {
+    bottom: 22%;
+  }
+  .hover-content {
+    line-height: 30px;
+  }
+}
+
+/*MQ max 960px*/
+@media (max-width: 960px) {
+  /*Section 2*/
+  .comment-item {
+    width: 600px;
+  }
+  /*Section 3*/
+  .post {
+    flex: 0 0 100%;
+  }
+}
+
+/*MQ max 744px*/
+@media (max-width: 744px) {
+  /*Section 1*/
+  .hero-hr {
+    width: 60%;
+  }
+  .content-img img {
+    max-height: 400px;
+  }
+  .close {
+    font-size: 1.5rem;
+  }
+  /*Section 2*/
+  .section2-container {
+    padding: 0 25px;
+  }
+  .how-to-hr-left,
+  .how-to-hr-right {
+    width: 100%;
+  }
+  form input,
+  form textarea {
+    min-width: 300px;
+  }
+  .comment-item {
+    width: 300px;
+  }
+  /*Section 3*/
+  .simular-h2-container {
+    padding: 25px;
+  }
+  .simular-hr {
+    width: 250px;
+  }
+}

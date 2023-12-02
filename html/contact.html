@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Have culinary queries or savory stories to share? Contact James Cooks! We're all ears for your food thoughts, feedback, or collaborations. Let's stir up a conversation."
+    />
+    <title>James Cook | Get in Touch</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Roboto:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/images/android-chrome-192x192.png"
+    />
+    <link rel="stylesheet" href="/css/global.css" />
+    <link rel="stylesheet" href="/css/contact.css" />
+    <link rel="stylesheet" href="/css/form.css" />
+    <script
+      src="https://kit.fontawesome.com/0933736d52.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script src="/js/global.js" defer></script>
+    <script src="/js/form.js" defer></script>
+    <!-- Hotjar Tracking Code for JamesSmith-Foodblog -->
+    <script>
+      (function (h, o, t, j, a, r) {
+        h.hj =
+          h.hj ||
+          function () {
+            (h.hj.q = h.hj.q || []).push(arguments);
+          };
+        h._hjSettings = { hjid: 3747166, hjsv: 6 };
+        a = o.getElementsByTagName("head")[0];
+        r = o.createElement("script");
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
+    </script>
+  </head>
+  <body>
+    <div id="top-of-page" class="site-container">
+      <header>
+        <!-- === NAV BAR === -->
+        <button class="hamburger" aria-label="Toggle navigation menu">
+          <i class="fa-solid fa-burger"></i>
+        </button>
+        <nav class="flex center w-100">
+          <ul class="flex center">
+            <li>
+              <a href="/index.html"><span></span>HOME</a>
+            </li>
+            <li>
+              <a href="/html/contact.html"><span></span>CONTACT</a>
+            </li>
+            <li>
+              <a href="/html/about.html"><span></span>ABOUT</a>
+            </li>
+            <li>
+              <a href="/html/posts.html"><span></span>POSTS</a>
+            </li>
+          </ul>
+        </nav>
+        <!-- === BRAND SECTION === -->
+        <section class="brand-container flex center">
+          <a class="flex center" href="/index.html"
+            ><h1 class="flex center">
+              James
+              <img
+                class="brand-logo"
+                src="/images/Brand-logo.png"
+                alt="Brand logo. Plate with fork and knife"
+              />
+              Cooks
+            </h1></a
+          >
+        </section>
+      </header>
+      <main>
+        <!-- === HERO === -->
+        <figure>
+          <img
+            class="hero-img w-100 box-shadow block"
+            src="/images/Contact1.jpg"
+            alt="People sitting round a table in the sunset eating food"
+          />
+          <figcaption class="visually-hidden">
+            Friends enjoying a meal together during a golden sunset.
+          </figcaption>
+        </figure>
+        <!-- === SECTION 1 FORM === -->
+        <section class="content-container flex-column center">
+          <h2>CONTACT:</h2>
+          <hr class="header-sub-text" />
+          <p class="header-sub-text text-center">
+            Craving a new recipe or have a question about one you’ve tried? Drop
+            me a line! Whether it’s feedback, queries, or suggestions, i´d love
+            to hear from you. Dive into the culinary conversation with me!
+          </p>
+          <form
+            class="center flex-column"
+            id="contactForm"
+            action="/html/contact-thank-you.html"
+            method="post"
+          >
+            <label class="visually-hidden" for="contactName">Name:</label>
+            <input
+              type="text"
+              id="contactName"
+              name="contactname"
+              placeholder="Name"
+            />
+            <p class="error-message" id="contactNameError"></p>
+            <label class="visually-hidden" for="contactEmail">Email:</label>
+            <input
+              type="email"
+              id="contactEmail"
+              name="contactemail"
+              placeholder="Email"
+            />
+            <p class="error-message" id="contactEmailError"></p>
+            <label class="visually-hidden" for="contactSubject">Subject:</label>
+            <input
+              type="text"
+              id="contactSubject"
+              name="contactsubject"
+              placeholder="Subject"
+            />
+            <p class="error-message" id="contactSubjectError"></p>
+            <label class="visually-hidden" for="contactMessage">Message:</label>
+            <textarea
+              id="contactMessage"
+              name="contactmessage"
+              placeholder="Your message"
+            ></textarea>
+            <p class="error-message" id="contactMessageError"></p>
+            <button class="cta-layout w-100" type="submit">Submit</button>
+            <p class="error-message" id="errorMessageSubmit"></p>
+          </form>
+        </section>
+      </main>
+      <footer id="newsletter-section" class="">
+        <div class="footer-links-some flex space-between center">
+          <div class="footer-links flex-column">
+            <p class="footer-links-header">Quick links:</p>
+            <a href="/html/posts.html">All blog posts</a>
+            <a href="/html/about.html">About</a>
+            <a href="/html/contact.html">Contact</a>
+            <a href="/index.html">Home</a>
+          </div>
+          <div class="footer-brand-container">
+            <a class="flex center" href="/html/contact.html#top-of-page"
+              ><p class="flex center footer-brand-text">
+                James
+                <img
+                  class="brand-logo"
+                  src="/images/Brand-logo-footer.png"
+                  alt="Brand logo. Plate with fork and knife(white)"
+                />
+                Cooks
+              </p></a
+            >
+          </div>
+          <div class="footer-some flex">
+            <i class="fa-brands fa-facebook fa-2x"></i
+            ><i class="fa-brands fa-instagram fa-2x"></i
+            ><i class="fa-brands fa-twitter fa-2x"></i>
+          </div>
+        </div>
+        <div class="copyright-container flex center">
+          <p>COPYRIGHT 2023 © JAMES SMITH</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

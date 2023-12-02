@@ -1,0 +1,50 @@
+/* HERO */
+.hero-img {
+  max-height: 500px;
+  object-position: center;
+}
+/* === SECTION 1 CONTACT=== */
+.header-sub-text {
+  width: 50%;
+  margin-bottom: 25px;
+}
+/*HR*/
+hr {
+  margin: 20px 0 30px;
+  max-width: 200px;
+}
+/*FORM*/
+form input,
+form textarea {
+  width: 550px;
+}
+form textarea {
+  height: 250px;
+}
+.cta-layout {
+  margin: 25px 0 100px;
+}
+/*Rest of the Form styles in form.css*/
+
+/* === FOOTER=== */
+footer {
+  margin-top: 0;
+}
+
+/* === MEDIA QUERIES === */
+/*MQ for max 1059px*/
+@media (max-width: 1059px) {
+  .header-sub-text {
+    width: 60%;
+  }
+}
+/*MQ for max 744px*/
+@media (max-width: 744px) {
+  .header-sub-text {
+    width: 90%;
+  }
+  form input,
+  form textarea {
+    width: 275px;
+  }
+}

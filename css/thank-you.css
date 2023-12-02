@@ -1,0 +1,44 @@
+/* HERO */
+.hero-img {
+  max-height: 500px;
+  object-position: center;
+}
+
+/* === SECTION 1 Thank you=== */
+.header-sub-text {
+  width: 50%;
+  margin-bottom: 25px;
+}
+.bold-anchor {
+  font-weight: var(--body-font-weight-bold);
+  border-bottom: 1px solid var(--main-color);
+}
+/*HR*/
+hr {
+  margin: 20px 0 30px;
+  max-width: 200px;
+}
+
+.bot-text {
+  margin: 100px;
+}
+/* === FOOTER=== */
+footer {
+  margin-top: 0;
+}
+
+/* === MEDIA QUERIES === */
+/*MQ for max 1059px*/
+@media (max-width: 1059px) {
+  /*Section 1*/
+  .header-sub-text {
+    width: 60%;
+  }
+}
+/*MQ for max 744px*/
+@media (max-width: 744px) {
+  /*Section 1*/
+  .header-sub-text {
+    width: 90%;
+  }
+}
